@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		407FC3EA26D0882A0030E4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC3E926D0882A0030E4BC /* AppDelegate.swift */; };
+		407FC3EC26D0882A0030E4BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC3EB26D0882A0030E4BC /* SceneDelegate.swift */; };
+		407FC3EE26D0882A0030E4BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC3ED26D0882A0030E4BC /* ViewController.swift */; };
+		407FC3F126D0882A0030E4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407FC3EF26D0882A0030E4BC /* Main.storyboard */; };
+		407FC3F326D0882D0030E4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407FC3F226D0882D0030E4BC /* Assets.xcassets */; };
+		407FC3F626D0882D0030E4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407FC3F426D0882D0030E4BC /* LaunchScreen.storyboard */; };
+		407FC40126D0882D0030E4BC /* Rubic_s_Timer_4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC40026D0882D0030E4BC /* Rubic_s_Timer_4Tests.swift */; };
+		407FC40C26D0882D0030E4BC /* Rubic_s_Timer_4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC40B26D0882D0030E4BC /* Rubic_s_Timer_4UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		407FC3FD26D0882D0030E4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407FC3DE26D0882A0030E4BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 407FC3E526D0882A0030E4BC;
+			remoteInfo = "Rubic's Timer-4";
+		};
+		407FC40826D0882D0030E4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407FC3DE26D0882A0030E4BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 407FC3E526D0882A0030E4BC;
+			remoteInfo = "Rubic's Timer-4";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		407FC3E626D0882A0030E4BC /* Rubic's Timer-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubic's Timer-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		407FC3E926D0882A0030E4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		407FC3EB26D0882A0030E4BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		407FC3ED26D0882A0030E4BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		407FC3F026D0882A0030E4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		407FC3F226D0882D0030E4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		407FC3F526D0882D0030E4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		407FC3F726D0882D0030E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		407FC3FC26D0882D0030E4BC /* Rubic's Timer-4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubic's Timer-4Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		407FC40026D0882D0030E4BC /* Rubic_s_Timer_4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubic_s_Timer_4Tests.swift; sourceTree = "<group>"; };
+		407FC40226D0882D0030E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		407FC40726D0882D0030E4BC /* Rubic's Timer-4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubic's Timer-4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		407FC40B26D0882D0030E4BC /* Rubic_s_Timer_4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubic_s_Timer_4UITests.swift; sourceTree = "<group>"; };
+		407FC40D26D0882D0030E4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		407FC3E326D0882A0030E4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC3F926D0882D0030E4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC40426D0882D0030E4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		407FC3DD26D0882A0030E4BC = {
+			isa = PBXGroup;
+			children = (
+				407FC3E826D0882A0030E4BC /* Rubic's Timer-4 */,
+				407FC3FF26D0882D0030E4BC /* Rubic's Timer-4Tests */,
+				407FC40A26D0882D0030E4BC /* Rubic's Timer-4UITests */,
+				407FC3E726D0882A0030E4BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		407FC3E726D0882A0030E4BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				407FC3E626D0882A0030E4BC /* Rubic's Timer-4.app */,
+				407FC3FC26D0882D0030E4BC /* Rubic's Timer-4Tests.xctest */,
+				407FC40726D0882D0030E4BC /* Rubic's Timer-4UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		407FC3E826D0882A0030E4BC /* Rubic's Timer-4 */ = {
+			isa = PBXGroup;
+			children = (
+				407FC3E926D0882A0030E4BC /* AppDelegate.swift */,
+				407FC3EB26D0882A0030E4BC /* SceneDelegate.swift */,
+				407FC3ED26D0882A0030E4BC /* ViewController.swift */,
+				407FC3EF26D0882A0030E4BC /* Main.storyboard */,
+				407FC3F226D0882D0030E4BC /* Assets.xcassets */,
+				407FC3F426D0882D0030E4BC /* LaunchScreen.storyboard */,
+				407FC3F726D0882D0030E4BC /* Info.plist */,
+			);
+			path = "Rubic's Timer-4";
+			sourceTree = "<group>";
+		};
+		407FC3FF26D0882D0030E4BC /* Rubic's Timer-4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				407FC40026D0882D0030E4BC /* Rubic_s_Timer_4Tests.swift */,
+				407FC40226D0882D0030E4BC /* Info.plist */,
+			);
+			path = "Rubic's Timer-4Tests";
+			sourceTree = "<group>";
+		};
+		407FC40A26D0882D0030E4BC /* Rubic's Timer-4UITests */ = {
+			isa = PBXGroup;
+			children = (
+				407FC40B26D0882D0030E4BC /* Rubic_s_Timer_4UITests.swift */,
+				407FC40D26D0882D0030E4BC /* Info.plist */,
+			);
+			path = "Rubic's Timer-4UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		407FC3E526D0882A0030E4BC /* Rubic's Timer-4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407FC41026D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4" */;
+			buildPhases = (
+				407FC3E226D0882A0030E4BC /* Sources */,
+				407FC3E326D0882A0030E4BC /* Frameworks */,
+				407FC3E426D0882A0030E4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rubic's Timer-4";
+			productName = "Rubic's Timer-4";
+			productReference = 407FC3E626D0882A0030E4BC /* Rubic's Timer-4.app */;
+			productType = "com.apple.product-type.application";
+		};
+		407FC3FB26D0882D0030E4BC /* Rubic's Timer-4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407FC41326D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4Tests" */;
+			buildPhases = (
+				407FC3F826D0882D0030E4BC /* Sources */,
+				407FC3F926D0882D0030E4BC /* Frameworks */,
+				407FC3FA26D0882D0030E4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				407FC3FE26D0882D0030E4BC /* PBXTargetDependency */,
+			);
+			name = "Rubic's Timer-4Tests";
+			productName = "Rubic's Timer-4Tests";
+			productReference = 407FC3FC26D0882D0030E4BC /* Rubic's Timer-4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		407FC40626D0882D0030E4BC /* Rubic's Timer-4UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407FC41626D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4UITests" */;
+			buildPhases = (
+				407FC40326D0882D0030E4BC /* Sources */,
+				407FC40426D0882D0030E4BC /* Frameworks */,
+				407FC40526D0882D0030E4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				407FC40926D0882D0030E4BC /* PBXTargetDependency */,
+			);
+			name = "Rubic's Timer-4UITests";
+			productName = "Rubic's Timer-4UITests";
+			productReference = 407FC40726D0882D0030E4BC /* Rubic's Timer-4UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		407FC3DE26D0882A0030E4BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					407FC3E526D0882A0030E4BC = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					407FC3FB26D0882D0030E4BC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 407FC3E526D0882A0030E4BC;
+					};
+					407FC40626D0882D0030E4BC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 407FC3E526D0882A0030E4BC;
+					};
+				};
+			};
+			buildConfigurationList = 407FC3E126D0882A0030E4BC /* Build configuration list for PBXProject "Rubic's Timer-4" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 407FC3DD26D0882A0030E4BC;
+			productRefGroup = 407FC3E726D0882A0030E4BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				407FC3E526D0882A0030E4BC /* Rubic's Timer-4 */,
+				407FC3FB26D0882D0030E4BC /* Rubic's Timer-4Tests */,
+				407FC40626D0882D0030E4BC /* Rubic's Timer-4UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		407FC3E426D0882A0030E4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407FC3F626D0882D0030E4BC /* LaunchScreen.storyboard in Resources */,
+				407FC3F326D0882D0030E4BC /* Assets.xcassets in Resources */,
+				407FC3F126D0882A0030E4BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC3FA26D0882D0030E4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC40526D0882D0030E4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		407FC3E226D0882A0030E4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407FC3EE26D0882A0030E4BC /* ViewController.swift in Sources */,
+				407FC3EA26D0882A0030E4BC /* AppDelegate.swift in Sources */,
+				407FC3EC26D0882A0030E4BC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC3F826D0882D0030E4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407FC40126D0882D0030E4BC /* Rubic_s_Timer_4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407FC40326D0882D0030E4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407FC40C26D0882D0030E4BC /* Rubic_s_Timer_4UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		407FC3FE26D0882D0030E4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 407FC3E526D0882A0030E4BC /* Rubic's Timer-4 */;
+			targetProxy = 407FC3FD26D0882D0030E4BC /* PBXContainerItemProxy */;
+		};
+		407FC40926D0882D0030E4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 407FC3E526D0882A0030E4BC /* Rubic's Timer-4 */;
+			targetProxy = 407FC40826D0882D0030E4BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		407FC3EF26D0882A0030E4BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407FC3F026D0882A0030E4BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		407FC3F426D0882D0030E4BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407FC3F526D0882D0030E4BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		407FC40E26D0882D0030E4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		407FC40F26D0882D0030E4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		407FC41126D0882D0030E4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		407FC41226D0882D0030E4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		407FC41426D0882D0030E4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubic's Timer-4.app/Rubic's Timer-4";
+			};
+			name = Debug;
+		};
+		407FC41526D0882D0030E4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubic's Timer-4.app/Rubic's Timer-4";
+			};
+			name = Release;
+		};
+		407FC41726D0882D0030E4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rubic's Timer-4";
+			};
+			name = Debug;
+		};
+		407FC41826D0882D0030E4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rubic's Timer-4UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.koyanagi.nao.Rubic-s-Timer-4UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rubic's Timer-4";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407FC3E126D0882A0030E4BC /* Build configuration list for PBXProject "Rubic's Timer-4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407FC40E26D0882D0030E4BC /* Debug */,
+				407FC40F26D0882D0030E4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407FC41026D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407FC41126D0882D0030E4BC /* Debug */,
+				407FC41226D0882D0030E4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407FC41326D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407FC41426D0882D0030E4BC /* Debug */,
+				407FC41526D0882D0030E4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407FC41626D0882D0030E4BC /* Build configuration list for PBXNativeTarget "Rubic's Timer-4UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407FC41726D0882D0030E4BC /* Debug */,
+				407FC41826D0882D0030E4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 407FC3DE26D0882A0030E4BC /* Project object */;
+}
