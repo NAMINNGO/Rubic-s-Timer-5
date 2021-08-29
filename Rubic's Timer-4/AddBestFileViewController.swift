@@ -36,8 +36,7 @@ class AddBestFileViewController: UIViewController {
                     handler: { action in
                     }))
             present(alert, animated: true, completion: nil)
-        }else// if //この名前がすでに Best File の中にないかどうか
-        {
+        }else if appDelegate.BestFile.contains(FileName.text!) == false{
             newFileName = FileName.text!
 
             appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
@@ -51,6 +50,15 @@ class AddBestFileViewController: UIViewController {
                     handler: { action in
                         self.dismiss(animated: true, completion: nil)
                     }) )
+            present(alert, animated: true, completion: nil)
+        }else{
+            let alert:UIAlertController = UIAlertController(title: "ファイル名を変更してください", message: "同じ名前のファイルがすでに存在しています。名前を変えてください。", preferredStyle: .alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: { action in
+                    }))
             present(alert, animated: true, completion: nil)
         }
     }
