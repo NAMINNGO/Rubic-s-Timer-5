@@ -89,17 +89,13 @@ class ViewController: UIViewController{
             
             //ListViewContrillerへ
             //記録
-            appDelegate.timeArray = appDelegate.saveList.stringArray(forKey: "Time")!
             appDelegate.timeArray.insert(String(count_sishagonyu), at:0)
-            appDelegate.saveList.set(appDelegate.timeArray, forKey: "Time")
             //日付
             let date = Date()
             let dateFormatter = DateFormatter()
             // DateFormatter を使用して書式とロケールを指定する
             dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "y/M/d", options: 0, locale: Locale(identifier: "ja_JP"))
-            appDelegate.dateArray = appDelegate.saveList.stringArray(forKey: "Date")!
             appDelegate.dateArray.insert((dateFormatter.string(from: date)), at:0)
-            appDelegate.saveList.set(appDelegate.dateArray, forKey: "Date")
             
             
         }else if tapNumber == 1 {
@@ -140,9 +136,7 @@ class ViewController: UIViewController{
             countdown_timer.invalidate()
             countdown_count = 0
             
-            appDelegate.scrambleArray = appDelegate.saveList.stringArray(forKey: "Scr")!
             appDelegate.scrambleArray.insert(String(scramble_5), at:0)
-            appDelegate.saveList.set(appDelegate.scrambleArray, forKey: "Scr")
             
             //0.5秒後に消す
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
