@@ -58,11 +58,26 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
            }
     
     @IBAction func resetList() {
-        timeArray_2 = []
-        appDelegate.timeArray = []
-        appDelegate.dateArray = []
-        appDelegate.scrambleArray = []
-        table.reloadData()
+        let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "リストの全てを保存しますか？", preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "削除",
+                style: .destructive,
+                handler: { action in
+                    self.timeArray_2 = []
+                    self.appDelegate.timeArray = []
+                    self.appDelegate.dateArray = []
+                    self.appDelegate.scrambleArray = []
+                    self.table.reloadData()
+                }) )
+        alert.addAction(
+            UIAlertAction(
+                title: "キャンセル",
+                style: .default,
+                handler: { action in
+                }) )
+        present(alert, animated: true, completion: nil)
+        
     }
         
     //セルの編集許可

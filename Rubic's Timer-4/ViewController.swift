@@ -53,6 +53,11 @@ class ViewController: UIViewController{
     var scramble_count: Int = 0
     var scramble_5: String = ""
     
+    
+    
+    var kaburi: Int = 6
+    var random: Int = 6
+    
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     let SoundPlayer_1 = try! AVAudioPlayer(data: NSDataAsset(name: "警告音1")!.data)
@@ -73,6 +78,13 @@ class ViewController: UIViewController{
         
         scramble()
         
+        //var BestTimeArray: Dictionary<String, Any> = [:]
+        
+        //let varName  = "333"
+        //BestTimeArray[varName] = ["10.000", "20.000"]
+        //print("現在の\(varName)\(BestTimeArray[varName]!)")
+        
+        //BestTimeArray[333] = ["10.000", "20.000"]
         
     }
     
@@ -253,12 +265,16 @@ class ViewController: UIViewController{
     
     func scramble() {
         scrambleArray_1 = ["U", "F", "R", "D", "B", "L"]
-        scrambleArray_2 = [" ", "' ", "2 ", "w "]
+        scrambleArray_2 = ["  ", "'  ", "2  ", "w  "]
         scramble_count = 0
         scramble_5 = ""
         
         while scramble_count <= 17{
-            let scrambleArray_1Index = Int.random(in: 0...5)
+            while random == kaburi{
+            random = Int.random(in: 0...5)
+                }
+            kaburi = random
+            let scrambleArray_1Index = random
             let scrambleArray_2Index = Int.random(in: 0...3)
             scramble_3 = ("\(scrambleArray_1[scrambleArray_1Index])\(scrambleArray_2[scrambleArray_2Index])")
             scramble_count += 1

@@ -21,10 +21,13 @@ class AddBestFileViewController: UIViewController {
         super.viewDidLoad()
         
         self.button_addedFile.layer.cornerRadius = 10.00
+        
+        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 80)
 
         //Do any additional setup after loading the view.
     }
         
+    
     @IBAction func addedFile() {
         
         if FileName.text == ""{
@@ -38,7 +41,13 @@ class AddBestFileViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }else if appDelegate.BestFile.contains(FileName.text!) == false{
             newFileName = FileName.text!
-
+            
+            
+            //配列を生成するコード
+            
+            
+            
+            
             appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
             appDelegate.BestFile.append(newFileName)
             appDelegate.saveBestFile.set(appDelegate.BestFile, forKey: "Best")
@@ -51,6 +60,8 @@ class AddBestFileViewController: UIViewController {
                         self.dismiss(animated: true, completion: nil)
                     }) )
             present(alert, animated: true, completion: nil)
+            
+            
         }else{
             let alert:UIAlertController = UIAlertController(title: "ファイル名を変更してください", message: "同じ名前のファイルがすでに存在しています。名前を変えてください。", preferredStyle: .alert)
             alert.addAction(
