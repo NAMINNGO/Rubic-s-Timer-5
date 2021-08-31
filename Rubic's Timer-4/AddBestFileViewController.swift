@@ -39,18 +39,16 @@ class AddBestFileViewController: UIViewController {
                     handler: { action in
                     }))
             present(alert, animated: true, completion: nil)
-        }else if appDelegate.BestFile.contains(FileName.text!) == false{
+        }else if appDelegate.BestFileDic.keys.contains(FileName.text!) == false{
             newFileName = FileName.text!
+            //appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
+            //appDelegate.BestFile.append(newFileName)
+            //appDelegate.saveBestFile.set(appDelegate.BestFile, forKey: "Best")
             
+            appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
+            appDelegate.BestFileDic.updateValue([], forKey: "\(newFileName)")
+            appDelegate.saveBestFileDic.set(appDelegate.BestFileDic, forKey: "BestDic")
             
-            //配列を生成するコード
-            
-            
-            
-            
-            appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
-            appDelegate.BestFile.append(newFileName)
-            appDelegate.saveBestFile.set(appDelegate.BestFile, forKey: "Best")
             let alert:UIAlertController = UIAlertController(title: "ファイルを追加しました", message: "ファイル名は『\(newFileName)』です", preferredStyle: .alert)
             alert.addAction(
                 UIAlertAction(

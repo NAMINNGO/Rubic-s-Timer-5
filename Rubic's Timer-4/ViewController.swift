@@ -76,16 +76,7 @@ class ViewController: UIViewController{
         
         ikkaime = 0
         
-        scramble()
-        
-        //var BestTimeArray: Dictionary<String, Any> = [:]
-        
-        //let varName  = "333"
-        //BestTimeArray[varName] = ["10.000", "20.000"]
-        //print("現在の\(varName)\(BestTimeArray[varName]!)")
-        
-        //BestTimeArray[333] = ["10.000", "20.000"]
-        
+        scramble()        
     }
     
 

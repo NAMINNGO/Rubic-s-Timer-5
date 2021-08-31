@@ -12,26 +12,27 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var time: UITableView!
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var selectkey:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         time.dataSource = self
         time.delegate = self
+        print("表示すべき配列：\(selectkey)")
+        print("配列の中身の数：\(selectkey.count)")
 
         // Do any additional setup after loading the view.
     }
-    
-    //仮　本当は、Best Timeの前ページで押されたものによって表示を変えなければならない
     func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
-     return appDelegate.timeArray.count
+     return selectkey.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-        appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
-        cell?.textLabel?.text = appDelegate.saveBestFile.stringArray(forKey: "Best")![indexPath.row]
+        //cell?.textLabel?.text = selectkey[indexPath.row]
         return cell!
     }
     

@@ -12,6 +12,8 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var file: UITableView!
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var selectkey:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +21,7 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
         file.dataSource = self
         file.delegate = self
         
-        appDelegate.saveBestFile.register(defaults: ["Best": ["下の＋で追加、スワイプで削除できます"]])
-        
+        appDelegate.saveBestFileDic.register(defaults: ["BestDic": ["＋でファイルを追加、スワイプで削除": "計測後にBest Timeに追加しましょう"]])
         file.reloadData()
         
         // Do any additional setup after loading the view.
@@ -34,14 +35,15 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-        appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
-        cell?.textLabel?.text = appDelegate.saveBestFile.stringArray(forKey: "Best")![indexPath.row]
+        //appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
+        appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
+        cell?.textLabel?.text = [String](appDelegate.BestFileDic.keys)[indexPath.row]
         return cell!
     }
     //セルの数を設定
            func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
-            appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
-            return appDelegate.BestFile.count
+            appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
+            return appDelegate.BestFileDic.keys.count
            }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
@@ -52,29 +54,15 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == UITableViewCell.EditingStyle.delete {
                 
-                let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "ファイルを削除すると『\(appDelegate.BestFile[indexPath.row])』に含まれるデータも削除されます", preferredStyle: .alert)
+                let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "ファイルを削除すると『\([String](appDelegate.BestFileDic.keys)[indexPath.row])』に含まれるデータも削除されます", preferredStyle: .alert)
                 alert.addAction(
                     UIAlertAction(
                         title: "削除",
                         style: .destructive,
                         handler: { action in
-                            let alert:UIAlertController = UIAlertController(title: "確認", message: "本当に削除しますか？ファイルを削除すると『\(self.appDelegate.BestFile[indexPath.row])』に含まれるデータも削除されます", preferredStyle: .alert)
-                            alert.addAction(
-                                UIAlertAction(
-                                    title: "削除",
-                                    style: .destructive,
-                                    handler: { action in
-                                        self.appDelegate.BestFile.remove(at: indexPath.row)
-                                        self.appDelegate.saveBestFile.set(self.appDelegate.BestFile, forKey: "Best")
-                                        tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-                                    }))
-                            alert.addAction(
-                                UIAlertAction(
-                                    title: "キャンセル",
-                                    style: .default,
-                                    handler: { action in
-                                    }) )
-                            self.present(alert, animated: true, completion: nil)
+                            self.appDelegate.BestFileDic["\([String](self.appDelegate.BestFileDic.keys)[indexPath.row])"] = nil
+                            self.appDelegate.saveBestFileDic.set(self.appDelegate.BestFileDic, forKey: "BestDic")
+                            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
                         }))
                 alert.addAction(
                     UIAlertAction(
@@ -86,6 +74,13 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        appDelegate.BestFileDic["444"] = ["10.000", "20.000"]
+        
+        selectkey = "\(String(describing: appDelegate.BestFileDic["\([String](appDelegate.BestFileDic.keys)[indexPath.row])"]))"
+        print("遷移直前のselectkey:\(selectkey)")
+        
+        print("\(indexPath.row)行目が選択されました")
      
             // セルの選択を解除
             tableView.deselectRow(at: indexPath, animated: true)
@@ -93,6 +88,15 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
             // 別の画面に遷移
             performSegue(withIdentifier: "toBestTime", sender: nil)
         }
+    
+    //セグエを準備するときに呼ばれるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBestTime" {
+            //値の受け渡しをするコード
+            let BestTimeViewController = segue.destination as! BestTimeViewController
+            BestTimeViewController.selectkey = self.selectkey
+        }
+    }
 
     /*
     // MARK: - Navigation
