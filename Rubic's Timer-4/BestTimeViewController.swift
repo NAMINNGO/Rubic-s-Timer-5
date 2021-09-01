@@ -14,25 +14,36 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var selectkey:String = ""
+    
+    var timeArray = [String]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         time.dataSource = self
         time.delegate = self
-        print("表示すべき配列：\(selectkey)")
-        print("配列の中身の数：\(selectkey.count)")
+        
+        appDelegate.BestFileDic = ["444": ["444だぜ", "444だよ", "444なんだ〜"],
+                                   "こんにちは": ["こんにちはだぜ", "こんにちはだよ", "こんにちはなんだ〜"]]
+        print("selectkey：\(selectkey)")
+        print("keyの配列：\(appDelegate.BestFileDic["\(selectkey)"]!)")
+        
+        timeArray = appDelegate.BestFileDic["\(selectkey)"] as! [String]
+        
+        print("timeArray：\(timeArray)")
+
 
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
-     return selectkey.count
+        return timeArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-        //cell?.textLabel?.text = selectkey[indexPath.row]
+        cell?.textLabel?.text = timeArray[indexPath.row]
         return cell!
     }
     

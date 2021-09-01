@@ -21,7 +21,7 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
         file.dataSource = self
         file.delegate = self
         
-        appDelegate.saveBestFileDic.register(defaults: ["BestDic": ["＋でファイルを追加、スワイプで削除": "計測後にBest Timeに追加しましょう"]])
+        appDelegate.saveBestFileDic.register(defaults: ["BestDic": ["＋でファイルを追加、スワイプで削除": ["計測後にBest Timeに追加しましょう","タイム１"]]])
         file.reloadData()
         
         // Do any additional setup after loading the view.
@@ -34,8 +34,6 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
     //セルにタイムを表示させる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-
-        //appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
         appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
         cell?.textLabel?.text = [String](appDelegate.BestFileDic.keys)[indexPath.row]
         return cell!
@@ -75,13 +73,8 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        appDelegate.BestFileDic["444"] = ["10.000", "20.000"]
+        selectkey = "\([String](appDelegate.BestFileDic.keys)[indexPath.row])"
         
-        selectkey = "\(String(describing: appDelegate.BestFileDic["\([String](appDelegate.BestFileDic.keys)[indexPath.row])"]))"
-        print("遷移直前のselectkey:\(selectkey)")
-        
-        print("\(indexPath.row)行目が選択されました")
-     
             // セルの選択を解除
             tableView.deselectRow(at: indexPath, animated: true)
      
