@@ -11,11 +11,10 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var time: UITableView!
     
-    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     var selectkey:String = ""
-    
     var timeArray = [String]()
+    
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
 
     override func viewDidLoad() {
@@ -24,16 +23,11 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
         time.dataSource = self
         time.delegate = self
         
-        appDelegate.BestFileDic = ["444": ["444だぜ", "444だよ", "444なんだ〜"],
-                                   "こんにちは": ["こんにちはだぜ", "こんにちはだよ", "こんにちはなんだ〜"]]
-        print("selectkey：\(selectkey)")
-        print("keyの配列：\(appDelegate.BestFileDic["\(selectkey)"]!)")
-        
+        appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
         timeArray = appDelegate.BestFileDic["\(selectkey)"] as! [String]
         
         print("timeArray：\(timeArray)")
-
-
+        
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {

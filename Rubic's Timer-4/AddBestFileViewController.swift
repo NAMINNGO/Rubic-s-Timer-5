@@ -21,8 +21,7 @@ class AddBestFileViewController: UIViewController {
         super.viewDidLoad()
         
         self.button_addedFile.layer.cornerRadius = 10.00
-        
-        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 80)
+        appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
 
         //Do any additional setup after loading the view.
     }
@@ -41,11 +40,6 @@ class AddBestFileViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }else if appDelegate.BestFileDic.keys.contains(FileName.text!) == false{
             newFileName = FileName.text!
-            //appDelegate.BestFile = appDelegate.saveBestFile.stringArray(forKey: "Best")!
-            //appDelegate.BestFile.append(newFileName)
-            //appDelegate.saveBestFile.set(appDelegate.BestFile, forKey: "Best")
-            
-            appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
             appDelegate.BestFileDic.updateValue([], forKey: "\(newFileName)")
             appDelegate.saveBestFileDic.set(appDelegate.BestFileDic, forKey: "BestDic")
             

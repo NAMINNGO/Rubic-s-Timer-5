@@ -21,8 +21,12 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
         file.dataSource = self
         file.delegate = self
         
-        appDelegate.saveBestFileDic.register(defaults: ["BestDic": ["＋でファイルを追加、スワイプで削除": ["計測後にBest Timeに追加しましょう","タイム１"]]])
+        appDelegate.saveBestFileDic.register(defaults: ["BestDic": ["＋でファイルを追加、スワイプで削除": []]])
+        
         file.reloadData()
+        
+        print(appDelegate.BestFileDic.keys.count)
+        print(appDelegate.BestFileDic)
         
         // Do any additional setup after loading the view.
     }
@@ -31,14 +35,13 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
             file.reloadData()
         }
      
-    //セルにタイムを表示させる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
+        //BestFileDicのkeyのみをTableViewに表示
         cell?.textLabel?.text = [String](appDelegate.BestFileDic.keys)[indexPath.row]
         return cell!
     }
-    //セルの数を設定
            func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
             appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
             return appDelegate.BestFileDic.keys.count
@@ -58,6 +61,7 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
                         title: "削除",
                         style: .destructive,
                         handler: { action in
+                            self.appDelegate.BestFileDic = self.appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
                             self.appDelegate.BestFileDic["\([String](self.appDelegate.BestFileDic.keys)[indexPath.row])"] = nil
                             self.appDelegate.saveBestFileDic.set(self.appDelegate.BestFileDic, forKey: "BestDic")
                             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
@@ -72,13 +76,11 @@ class BestFileViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //selectkeyに選択されているkeyを入れて、BesttimeViewControllerに受け渡す
         selectkey = "\([String](appDelegate.BestFileDic.keys)[indexPath.row])"
-        
             // セルの選択を解除
             tableView.deselectRow(at: indexPath, animated: true)
-     
-            // 別の画面に遷移
+            // BestTimeViewControllerに遷移
             performSegue(withIdentifier: "toBestTime", sender: nil)
         }
     

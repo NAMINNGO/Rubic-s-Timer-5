@@ -15,11 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dateArray = [String]()
     var scrambleArray = [String]()
     
-    //var BestFile = [String]()
-    //var bestTime333Array = [String]()
     var Best_ikkaime: Int = 0
-    
-    //var saveBestFile: UserDefaults = UserDefaults.standard
     
     var BestFileDic = [String : Any]()
     var saveBestFileDic: UserDefaults = UserDefaults.standard
