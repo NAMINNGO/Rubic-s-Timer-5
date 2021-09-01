@@ -58,7 +58,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
            }
     
     @IBAction func resetList() {
-        let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "リストの全てを保存しますか？", preferredStyle: .alert)
+        let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "リストの全てを削除しますか？", preferredStyle: .alert)
         alert.addAction(
             UIAlertAction(
                 title: "削除",

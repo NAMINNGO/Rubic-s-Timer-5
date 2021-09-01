@@ -10,6 +10,7 @@ import UIKit
 class AddBestViewController: UIViewController {
     
     @IBOutlet var hitokoto: UITextView!
+    @IBOutlet var button_add: UIButton!
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -17,6 +18,7 @@ class AddBestViewController: UIViewController {
         super.viewDidLoad()
         
         self.hitokoto.layer.cornerRadius = 10.00
+        self.button_add.layer.cornerRadius = 10.00
         hitokoto.clipsToBounds = true
         
         
