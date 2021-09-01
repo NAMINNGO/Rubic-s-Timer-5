@@ -23,7 +23,7 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
         time.dataSource = self
         time.delegate = self
         
-        appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
+        //appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
         timeArray = appDelegate.BestFileDic["\(selectkey)"] as! [String]
         
         print("timeArray：\(timeArray)")

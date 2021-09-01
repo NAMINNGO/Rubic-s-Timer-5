@@ -40,7 +40,7 @@ class AddBestFileViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }else if appDelegate.BestFileDic.keys.contains(FileName.text!) == false{
             newFileName = FileName.text!
-            appDelegate.BestFileDic.updateValue([], forKey: "\(newFileName)")
+            appDelegate.BestFileDic["\(newFileName)"] = []
             appDelegate.saveBestFileDic.set(appDelegate.BestFileDic, forKey: "BestDic")
             
             let alert:UIAlertController = UIAlertController(title: "ファイルを追加しました", message: "ファイル名は『\(newFileName)』です", preferredStyle: .alert)
