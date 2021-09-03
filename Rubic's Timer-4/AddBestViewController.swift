@@ -95,6 +95,7 @@ class AddBestViewController: UIViewController, UITableViewDataSource, UITableVie
                 timeArray = appDelegate.BestFileDic["\(selectArray[index])"] as! [String]
                 print("timeArray前 : \(timeArray)")
                 timeArray.append(String(format: "%.3f", count))
+                timeArray.sort{$0 < $1}
                 appDelegate.BestFileDic["\(selectArray[index])"] = timeArray
                 print("timeArray後 : \(timeArray)")
                 index += 1

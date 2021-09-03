@@ -23,6 +23,8 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
         time.dataSource = self
         time.delegate = self
         
+        
+        appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
         timeArray = appDelegate.BestFileDic["\(selectkey)"] as! [String]
 
         
@@ -51,6 +53,7 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
                             self.timeArray.remove(at: indexPath.row)
                             self.appDelegate.BestFileDic["\([String](self.appDelegate.BestFileDic.keys)[indexPath.row])"] = self.timeArray
                             self.appDelegate.saveBestFileDic.set(self.appDelegate.BestFileDic, forKey: "BestDic")
+                            print(self.appDelegate.saveBestFileDic)
                             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
                         }))
                 alert.addAction(
