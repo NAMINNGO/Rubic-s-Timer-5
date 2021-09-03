@@ -23,10 +23,8 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
         time.dataSource = self
         time.delegate = self
         
-        //appDelegate.BestFileDic = appDelegate.saveBestFileDic.dictionary(forKey: "BestDic")!
         timeArray = appDelegate.BestFileDic["\(selectkey)"] as! [String]
-        
-        print("timeArray：\(timeArray)")
+
         
         // Do any additional setup after loading the view.
     }
@@ -40,6 +38,31 @@ class BestTimeViewController: UIViewController, UITableViewDataSource, UITableVi
         cell?.textLabel?.text = timeArray[indexPath.row]
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == UITableViewCell.EditingStyle.delete {
+                
+                let alert:UIAlertController = UIAlertController(title: "削除しますか？", message: "タイムをBestTimeから削除しますか？", preferredStyle: .alert)
+                alert.addAction(
+                    UIAlertAction(
+                        title: "削除",
+                        style: .destructive,
+                        handler: { action in
+                            self.timeArray.remove(at: indexPath.row)
+                            self.appDelegate.BestFileDic["\([String](self.appDelegate.BestFileDic.keys)[indexPath.row])"] = self.timeArray
+                            self.appDelegate.saveBestFileDic.set(self.appDelegate.BestFileDic, forKey: "BestDic")
+                            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+                        }))
+                alert.addAction(
+                    UIAlertAction(
+                        title: "キャンセル",
+                        style: .default,
+                        handler: { action in
+                        }) )
+                present(alert, animated: true, completion: nil)
+            }
+        }
+    
     
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)

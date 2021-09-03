@@ -69,6 +69,12 @@ class AddBestFileViewController: UIViewController {
     @IBAction func cancel() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.FileName.isFirstResponder) {
+            self.FileName.resignFirstResponder()
+        }
+    }
 
     /*
     // MARK: - Navigation

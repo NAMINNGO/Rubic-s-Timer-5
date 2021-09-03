@@ -282,12 +282,10 @@ class ViewController: UIViewController{
     }
     
     @IBAction func addBestTime() {
-        //appDelegate.bestTime333Array.insert(String(format: "%.3f", main_count), at:0)
-        //appDelegate.bestTime333Array.sort{$0 < $1}
         if appDelegate.Best_ikkaime == 0 {
             self.performSegue(withIdentifier: "toAddBest", sender: nil)
         }else{
-            let alert:UIAlertController = UIAlertController(title: "登録済みです！", message: "このタイムはすでにBest Timeに追加されました", preferredStyle: .alert)
+            let alert:UIAlertController = UIAlertController(title: "追加済みです！", message: "このタイムはすでにBest Timeに追加されました", preferredStyle: .alert)
             alert.addAction(
                 UIAlertAction(
                     title: "OK",
@@ -297,5 +295,12 @@ class ViewController: UIViewController{
             present(alert, animated: true, completion: nil)
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddBest" {
+            //値の受け渡しをするコード
+            let AddBestViewController = segue.destination as! AddBestViewController
+            AddBestViewController.count = self.main_count
+        }
     }
 }
