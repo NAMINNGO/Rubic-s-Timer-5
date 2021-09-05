@@ -98,7 +98,7 @@ class ViewController: UIViewController{
             //日付
             let date = Date()
             let dateFormatter = DateFormatter()
-            // DateFormatter を使用して書式とロケールを指定する
+            
             dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "y/M/d", options: 0, locale: Locale(identifier: "ja_JP"))
             appDelegate.dateArray.insert((dateFormatter.string(from: date)), at:0)
             

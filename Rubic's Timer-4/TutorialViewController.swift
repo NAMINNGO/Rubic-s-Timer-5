@@ -1,24 +1,22 @@
 //
-//  SelectTabBarViewController.swift
+//  TutorialViewController.swift
 //  Rubic's Timer-4
 //
-//  Created by 小柳　直秀 on 2021/09/04.
+//  Created by 小柳　直秀 on 2021/09/05.
 //
 
 import UIKit
 
-class SelectTabBarViewController: UITabBarController {
+class TutorialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedIndex = 1
-        
-        UITabBar.appearance().barTintColor = UIColor {_ in return #colorLiteral(red: 0, green: 0.1725490196, blue: 0.368627451, alpha: 1)}
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.performSegue(withIdentifier: "toTutorial1", sender: nil)
+        }
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 

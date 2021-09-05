@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ele-Ye-tpK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5En-AZ-eqc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -25,21 +25,20 @@
             </objects>
             <point key="canvasLocation" x="338" y="-461"/>
         </scene>
-        <!--Showdown-->
-        <scene sceneID="h8j-3X-eaf">
+        <!--View Controller-->
+        <scene sceneID="WOR-4J-ct9">
             <objects>
-                <viewController id="uA0-Dy-nmF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HcY-8G-EA3">
+                <viewController id="3HD-XL-Pj9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ArL-hz-6Gj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ncd-8d-sTI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="ODo-mo-12m"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Showdown" image="flame" catalog="system" id="lW0-to-Ugj"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aVQ-pi-l4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sG-Am-nNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="-1106"/>
+            <point key="canvasLocation" x="-1754" y="-547"/>
         </scene>
         <!--Timer-->
         <scene sceneID="M8P-zW-GYr">
@@ -982,7 +981,6 @@
                         <color key="selectedImageTintColor" red="1" green="1" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uA0-Dy-nmF" kind="relationship" relationship="viewControllers" id="F5f-Vl-bsf"/>
                         <segue destination="xlH-cT-SKN" kind="relationship" relationship="viewControllers" id="moa-Tz-UU0"/>
                         <segue destination="nVd-TC-UTG" kind="relationship" relationship="viewControllers" id="PdZ-ye-f4k"/>
                         <segue destination="V3F-yU-TEK" kind="relationship" relationship="viewControllers" id="8hS-3U-dex"/>
@@ -993,21 +991,120 @@
             </objects>
             <point key="canvasLocation" x="-653" y="183"/>
         </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="7iJ-GW-0Xb">
+            <objects>
+                <viewController storyboardIdentifier="tutorialViewCOntroller" id="5En-AZ-eqc" customClass="TutorialViewController" customModule="Rubic_s_Timer_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcX-Rp-2hP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScW-Ro-Px7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <state key="normal" image="初期画面背景"/>
+                                <connections>
+                                    <action selector="next" destination="5En-AZ-eqc" eventType="touchUpInside" id="eDF-8Z-mEc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rubic's Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-lM-JKc">
+                                <rect key="frame" x="56.5" y="194" width="301" height="60"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="アイコン画像" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-If-6r5">
+                                <rect key="frame" x="110.5" y="539" width="193" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="Nnd-dw-YQ9"/>
+                                    <constraint firstAttribute="height" constant="193" id="uUT-wu-Io8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tqU-tO-Q4E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IbF-lM-JKc" firstAttribute="top" secondItem="tqU-tO-Q4E" secondAttribute="top" constant="150" id="AQP-1l-mSN"/>
+                            <constraint firstAttribute="bottom" secondItem="ScW-Ro-Px7" secondAttribute="bottom" id="B1N-2e-OT1"/>
+                            <constraint firstItem="tqU-tO-Q4E" firstAttribute="trailing" secondItem="ScW-Ro-Px7" secondAttribute="trailing" id="U6U-4o-yrg"/>
+                            <constraint firstItem="IbF-lM-JKc" firstAttribute="centerX" secondItem="lcX-Rp-2hP" secondAttribute="centerX" id="Xsp-hn-jAm"/>
+                            <constraint firstItem="ScW-Ro-Px7" firstAttribute="top" secondItem="lcX-Rp-2hP" secondAttribute="top" id="c4R-Q1-cXl"/>
+                            <constraint firstItem="tgh-If-6r5" firstAttribute="centerX" secondItem="lcX-Rp-2hP" secondAttribute="centerX" id="cHY-g4-N6d"/>
+                            <constraint firstItem="tqU-tO-Q4E" firstAttribute="bottom" secondItem="tgh-If-6r5" secondAttribute="bottom" constant="130" id="k0g-q8-HKh"/>
+                            <constraint firstItem="ScW-Ro-Px7" firstAttribute="leading" secondItem="tqU-tO-Q4E" secondAttribute="leading" id="nZc-RL-d4K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ele-Ye-tpK" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="RJG-Lj-voz"/>
+                        <segue destination="xcx-X0-xsc" kind="presentation" identifier="toTutorial1" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="x06-5y-RgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D77-vA-33H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3404.347826086957" y="-547.09821428571422"/>
+        </scene>
+        <!--Tut2 View Controller-->
+        <scene sceneID="UhW-ht-ekn">
+            <objects>
+                <viewController id="xcx-X0-xsc" customClass="Tut2ViewController" customModule="Rubic_s_Timer_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyA-Kj-8Gi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-sY-i36">
+                                <rect key="frame" x="132" y="682" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aq9-8W-uqJ"/>
+                                    <constraint firstAttribute="height" constant="150" id="zNw-d5-G8d"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   はじめる" image="play" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="next" destination="xcx-X0-xsc" eventType="touchUpInside" id="gZ2-H1-daj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wkc-Wy-SXV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aG1-sY-i36" firstAttribute="bottom" secondItem="wkc-Wy-SXV" secondAttribute="bottom" constant="-30" id="Bcn-Tn-hK6"/>
+                            <constraint firstItem="aG1-sY-i36" firstAttribute="centerX" secondItem="yyA-Kj-8Gi" secondAttribute="centerX" id="fqc-hW-aRx"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <exclude reference="aG1-sY-i36"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="button_Start" destination="aG1-sY-i36" id="li3-bg-Ijp"/>
+                        <segue destination="3HD-XL-Pj9" kind="presentation" identifier="toTutorial2" animates="NO" modalPresentationStyle="fullScreen" id="nGS-SY-DBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8q-Ji-zrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584.057971014493" y="-547.09821428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="crown" catalog="system" width="128" height="92"/>
-        <image name="flame" catalog="system" width="108" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="list.star" catalog="system" width="128" height="94"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="plus.rectangle.on.folder" catalog="system" width="128" height="96"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="アイコン画像" width="1024" height="1024"/>
         <image name="トロフィー" width="441" height="601"/>
         <image name="入賞" width="169" height="165"/>
+        <image name="初期画面背景" width="1125" height="2436"/>
         <image name="銀メダル" width="417" height="558"/>
         <image name="銅メダル" width="414" height="576"/>
         <systemColor name="labelColor">
@@ -1021,6 +1118,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

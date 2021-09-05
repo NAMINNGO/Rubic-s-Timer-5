@@ -19,10 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var BestFileDic = [String : Any]()
     var saveBestFileDic: UserDefaults = UserDefaults.standard
+    var saveCount: UserDefaults = UserDefaults.standard
+    var Count: Int = 0
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        saveCount.register(defaults: ["BestDic": 0])
         
-        UITabBar.appearance().barTintColor = UIColor.blue
+        Count = saveCount.integer(forKey: "Count")
+        if Count == 0{
+
+            Count += 1
+            saveCount.set(Count, forKey: "Count")
+        }else{
+            Count += 1
+            saveCount.set(Count, forKey: "Count")
+        }
+        
         
         // Override point for customization after application launch.
         return true
