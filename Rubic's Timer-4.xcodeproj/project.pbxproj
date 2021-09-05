@@ -10,6 +10,7 @@
 		4021637C26D4D8C700938517 /* AddBestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021637B26D4D8C700938517 /* AddBestViewController.swift */; };
 		4021637E26D5C09500938517 /* BestFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021637D26D5C09500938517 /* BestFileViewController.swift */; };
 		4021638026D5C52800938517 /* AddBestFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021637F26D5C52800938517 /* AddBestFileViewController.swift */; };
+		40229A9726E34706009B461C /* SelectTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40229A9626E34706009B461C /* SelectTabBarViewController.swift */; };
 		4060FFF626D9DA9A00F39E55 /* BestTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060FFF526D9DA9A00F39E55 /* BestTimeViewController.swift */; };
 		407FC3EA26D0882A0030E4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC3E926D0882A0030E4BC /* AppDelegate.swift */; };
 		407FC3EC26D0882A0030E4BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC3EB26D0882A0030E4BC /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		4021637B26D4D8C700938517 /* AddBestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBestViewController.swift; sourceTree = "<group>"; };
 		4021637D26D5C09500938517 /* BestFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFileViewController.swift; sourceTree = "<group>"; };
 		4021637F26D5C52800938517 /* AddBestFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBestFileViewController.swift; sourceTree = "<group>"; };
+		40229A9626E34706009B461C /* SelectTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarViewController.swift; sourceTree = "<group>"; };
 		4060FFF526D9DA9A00F39E55 /* BestTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestTimeViewController.swift; sourceTree = "<group>"; };
 		407FC3E626D0882A0030E4BC /* Rubic's Timer-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubic's Timer-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407FC3E926D0882A0030E4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4021637D26D5C09500938517 /* BestFileViewController.swift */,
 				4060FFF526D9DA9A00F39E55 /* BestTimeViewController.swift */,
 				4021637F26D5C52800938517 /* AddBestFileViewController.swift */,
+				40229A9626E34706009B461C /* SelectTabBarViewController.swift */,
 				407FC3EF26D0882A0030E4BC /* Main.storyboard */,
 				407FC3F226D0882D0030E4BC /* Assets.xcassets */,
 				407FC3F426D0882D0030E4BC /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 				407FC3EE26D0882A0030E4BC /* ViewController.swift in Sources */,
 				407FC3EA26D0882A0030E4BC /* AppDelegate.swift in Sources */,
 				4060FFF626D9DA9A00F39E55 /* BestTimeViewController.swift in Sources */,
+				40229A9726E34706009B461C /* SelectTabBarViewController.swift in Sources */,
 				4021637C26D4D8C700938517 /* AddBestViewController.swift in Sources */,
 				40F9917D26D13011001090D7 /* ListViewController.swift in Sources */,
 				4021638026D5C52800938517 /* AddBestFileViewController.swift in Sources */,

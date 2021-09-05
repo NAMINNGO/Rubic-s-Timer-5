@@ -829,7 +829,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RaZ-F6-eLi" id="mXE-hh-tMl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="1" green="0.86737566860000004" blue="0.54420716570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -970,17 +969,17 @@
             </objects>
             <point key="canvasLocation" x="1099" y="1535"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Select Tab Bar View Controller-->
         <scene sceneID="4cP-5Z-lUC">
             <objects>
-                <tabBarController id="ele-Ye-tpK" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="dMp-cq-Lxw">
+                <tabBarController id="ele-Ye-tpK" customClass="SelectTabBarViewController" customModule="Rubic_s_Timer_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="dMp-cq-Lxw" customClass="CustomTabBar" customModule="Rubic_s_Timer_4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemTealColor"/>
                         <color key="barTintColor" red="0.1803921568627451" green="0.20000000000000001" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" red="0.28235294117647058" green="0.78431372549019607" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="uA0-Dy-nmF" kind="relationship" relationship="viewControllers" id="F5f-Vl-bsf"/>

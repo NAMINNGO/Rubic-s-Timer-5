@@ -72,7 +72,9 @@ class ViewController: UIViewController{
         self.button_addBest.layer.cornerRadius = 10.00
         
         button_addBest.isHidden = true
-    
+        
+        
+        
         
         ikkaime = 0
         

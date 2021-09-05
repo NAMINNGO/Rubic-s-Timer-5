@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var saveBestFileDic: UserDefaults = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UITabBar.appearance().barTintColor = UIColor.blue
+        
         // Override point for customization after application launch.
         return true
     }
@@ -41,4 +44,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 
