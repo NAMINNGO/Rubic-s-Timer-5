@@ -8,12 +8,34 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
+    
+    var Count: Int = 0
+    
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        
+        appDelegate.saveCount.register(defaults: ["Cpunt": 0])
+        Count = appDelegate.saveCount.integer(forKey: "Count")
+        if Count == 0{
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.performSegue(withIdentifier: "toHome", sender: nil)
+            }
+            
+            Count += 1
+            appDelegate.saveCount.set(Count, forKey: "Count")
+        }else{
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.performSegue(withIdentifier: "toTutorial1", sender: nil)
+            }
+            
+            Count += 1
+            appDelegate.saveCount.set(Count, forKey: "Count")
         }
+
         // Do any additional setup after loading the view.
     }
     

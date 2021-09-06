@@ -71,6 +71,8 @@ class Tut2ViewController: UIViewController {
         
         self.button_Start.layer.cornerRadius = 75.0
         
+        self.button_Start.isHidden = true
+        
         //label_1
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.view.addSubview(self.label_1)
@@ -83,7 +85,7 @@ class Tut2ViewController: UIViewController {
         }
         
         //label_2
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
             self.view.addSubview(self.label_2)
             //Auto Layout
             self.label_2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -93,7 +95,7 @@ class Tut2ViewController: UIViewController {
         }
         
         //label_3
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
             self.view.addSubview(self.label_3)
             //Auto Layout
             self.label_3.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -103,7 +105,7 @@ class Tut2ViewController: UIViewController {
         }
         
         //label_4
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
             self.view.addSubview(self.label_4)
             //Auto Layout
             self.label_4.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -123,7 +125,7 @@ class Tut2ViewController: UIViewController {
         }
         
         //label_6
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
             self.view.addSubview(self.label_6)
             //Auto Layout
             self.label_6.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -132,6 +134,10 @@ class Tut2ViewController: UIViewController {
             self.label_6.text = "ボタンをタップしてはじめる"
         }
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
+            self.button_Start.isHidden = false
+        self.animateView(self.button_Start)
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -143,6 +149,12 @@ class Tut2ViewController: UIViewController {
            transition.subtype = CATransitionSubtype.fromRight
            view.window!.layer.add(transition, forKey: kCATransition)
         self.performSegue(withIdentifier: "toTutorial2", sender: nil)
+    }
+    //フェードインのアニメーション
+    func animateView(_ viewAnimate: UIView) {
+        UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseIn) {
+                        viewAnimate.alpha = 1
+                    }
     }
 
     /*

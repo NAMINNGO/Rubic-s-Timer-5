@@ -11,9 +11,9 @@ class SelectTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedIndex = 1
+        selectedIndex = 0
         
-        UITabBar.appearance().barTintColor = UIColor {_ in return #colorLiteral(red: 0, green: 0.1725490196, blue: 0.368627451, alpha: 1)}
+        UITabBar.appearance().barTintColor = UIColor {_ in return #colorLiteral(red: 0.05765397102, green: 0.06810028106, blue: 0.1971357465, alpha: 1)}
 
         // Do any additional setup after loading the view.
     }
