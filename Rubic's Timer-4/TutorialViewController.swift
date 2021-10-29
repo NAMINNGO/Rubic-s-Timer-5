@@ -21,7 +21,7 @@ class TutorialViewController: UIViewController {
         if Count == 0{
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.performSegue(withIdentifier: "toHome", sender: nil)
+                self.performSegue(withIdentifier: "toTutorial1", sender: nil)
             }
             
             Count += 1
@@ -29,7 +29,7 @@ class TutorialViewController: UIViewController {
         }else{
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.performSegue(withIdentifier: "toTutorial1", sender: nil)
+            self.performSegue(withIdentifier: "toHome", sender: nil)
             }
             
             Count += 1

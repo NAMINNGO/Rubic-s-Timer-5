@@ -25,6 +25,7 @@ class ViewController: UIViewController{
     @IBOutlet var label_scramble: UILabel!
     @IBOutlet var button_next: UIButton!
     @IBOutlet var button_addBest: UIButton!
+    @IBOutlet var button_start: UIButton!
     
     //変数の宣言
     //main
@@ -72,10 +73,8 @@ class ViewController: UIViewController{
         self.button_addBest.layer.cornerRadius = 10.00
         
         button_addBest.isHidden = true
-        
-        
-        
-        
+        button_start.isHidden = false
+
         ikkaime = 0
         
         scramble()        
@@ -121,16 +120,13 @@ class ViewController: UIViewController{
             
             label_scramble.text = ""
             main_count = 0.00
-        }else if tapNumber == 0 {
-            now = 0
         }
-        
     }
     
     @IBAction func TouchUpInside() {
         if tapNumber == 1 {
             label_Ready.text = "Go!!"
-            label_Ready.textColor = UIColor.cyan
+            label_Ready.textColor = UIColor {_ in return #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)}
             
             main_timer = Timer.scheduledTimer(timeInterval: 0.01,
                                          target: self,
@@ -155,24 +151,29 @@ class ViewController: UIViewController{
                 total = total + main_count
                 average = total / times
                 label_average.text = String(format: "%.3f", average)
-                label_var.text = String(format: "%.0f", times)
+                label_var.text = String(times)
             appDelegate.Best_ikkaime = 0
  
             while fontsise >= 10{
                 fontsise = fontsise / 10
-                fontsise_2 = fontsise_2 + 1.0
+                fontsise_2 += 1.0
             }
-            label_Timer.font = UIFont.italicSystemFont(ofSize: 340.0 / fontsise_2)
+            label_Timer.font = UIFont.italicSystemFont(ofSize: 450.0 / fontsise_2)
             
             if ikkaime == 0 {
                 ikkaime = 1
                 BestTime = main_count
-            }else{
-                if BestTime > main_count {
+                
+            }else if BestTime > main_count{
                     BestTime = main_count
-                }
             }
-            label_bestTime.text = String(format: "%.3f", BestTime)
+            print("こんにちは")
+            BestTime = 12.45
+            print("------BestTime : \(String(format: "%.3Maf", BestTime))")
+            
+            button_start.isHidden = false
+            
+            label_bestTime.text = String(format: "%.3Maf", BestTime)
             
                 button_reset.isHidden = false
                 label_Average_label.isHidden = false
@@ -185,26 +186,34 @@ class ViewController: UIViewController{
                 button_next.isHidden = false
                 button_addBest.isHidden = false
             
+
+            
             scramble()
                 
                     tapNumber = 0
-        }else if tapNumber == 0{
-                
-                countdown_timer = Timer.scheduledTimer(timeInterval: 1,
-                                             target: self,
-                                             selector: #selector(self.down),
-                                             userInfo: nil,
-                                             repeats: true
-                                             )
-                
-                label_Timer.text = ""
-                self.label_Ready.text = ""
-            button_addBest.isHidden = true
-            tapNumber = 1
-            }
-            
+        }
         
     }
+    
+    @IBAction func s_TouchUpInside() {
+        countdown_timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(self.down),
+                                     userInfo: nil,
+                                     repeats: true
+                                     )
+        
+        label_Timer.text = ""
+        self.label_Ready.text = ""
+    button_addBest.isHidden = true
+    tapNumber = 1
+        button_start.isHidden = true
+    }
+    
+    @IBAction func s_TouchDown() {
+        now = 0
+    }
+    
     @objc func up() {
         //countを0.01足す
         main_count = main_count + 0.01
@@ -212,15 +221,14 @@ class ViewController: UIViewController{
         //ラベルに小数点以下2桁まで表示
         label_Timer.textColor = UIColor.white
                 fontsise = main_count
-                fontsise_2 = 3.0
+                fontsise_2 = 4.0
         
-
             self.label_Timer.text = String(format: "%.3f", main_count)
             while fontsise >= 10{
                 fontsise = fontsise / 10
-                fontsise_2 = fontsise_2 + 1.0
+                fontsise_2 += 1.0
             }
-            label_Timer.font = UIFont.italicSystemFont(ofSize: 340.0 / fontsise_2)
+            label_Timer.font = UIFont.italicSystemFont(ofSize: 450.0 / fontsise_2)
     }
     
     @objc func down() {
