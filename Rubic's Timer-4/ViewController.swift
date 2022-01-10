@@ -26,6 +26,8 @@ class ViewController: UIViewController{
     @IBOutlet var button_next: UIButton!
     @IBOutlet var button_addBest: UIButton!
     @IBOutlet var button_start: UIButton!
+    @IBOutlet var background_gray: UILabel!
+    
     
     //変数の宣言
     //main
@@ -43,8 +45,8 @@ class ViewController: UIViewController{
     var now: Int = 0
     var fontsise:Float = 0.0
     var fontsise_2:CGFloat = 0.0
-    var count_sishagonyu:Float = 0.0
-    var BestTime: Float = 0.0
+    var count_sishagonyu:String = ""
+    var bestTime: Float = 0.0
     var ikkaime: Int = 0
     var tapNumber: Int = 0
     //scramble
@@ -70,7 +72,9 @@ class ViewController: UIViewController{
       
         self.button_reset.layer.cornerRadius = 45.00
         self.button_next.layer.cornerRadius = 10.00
-        self.button_addBest.layer.cornerRadius = 10.00
+        self.button_addBest.layer.cornerRadius = 10.0
+        background_gray.layer.cornerRadius = 10
+        background_gray.clipsToBounds = true
         
         button_addBest.isHidden = true
         button_start.isHidden = false
@@ -89,11 +93,11 @@ class ViewController: UIViewController{
             
             label_Timer.textColor = UIColor.black
             
-            count_sishagonyu = round(main_count * 1000) / 1000
+            count_sishagonyu = String(format:"%.2f",main_count)
             
             //ListViewContrillerへ
             //記録
-            appDelegate.timeArray.insert(String(count_sishagonyu), at:0)
+            appDelegate.timeArray.insert(count_sishagonyu, at:0)
             //日付
             let date = Date()
             let dateFormatter = DateFormatter()
@@ -117,6 +121,7 @@ class ViewController: UIViewController{
                 label_var.isHidden = true
                 label_var_label.isHidden = true
                 button_next.isHidden = true
+            background_gray.isHidden = true
             
             label_scramble.text = ""
             main_count = 0.00
@@ -150,30 +155,25 @@ class ViewController: UIViewController{
                 times = times + 1
                 total = total + main_count
                 average = total / times
-                label_average.text = String(format: "%.3f", average)
-                label_var.text = String(times)
+                label_average.text = String(format: "%.2f", average)
+            label_var.text = String(format: "%.0f", times)
             appDelegate.Best_ikkaime = 0
  
             while fontsise >= 10{
                 fontsise = fontsise / 10
                 fontsise_2 += 1.0
             }
-            label_Timer.font = UIFont.italicSystemFont(ofSize: 450.0 / fontsise_2)
             
             if ikkaime == 0 {
                 ikkaime = 1
-                BestTime = main_count
+                bestTime = (round(main_count*1000) / 1000)
                 
-            }else if BestTime > main_count{
-                    BestTime = main_count
+            }else if bestTime > main_count{
+                bestTime = (round(main_count*1000) / 1000)
             }
-            print("こんにちは")
-            BestTime = 12.45
-            print("------BestTime : \(String(format: "%.3Maf", BestTime))")
             
             button_start.isHidden = false
-            
-            label_bestTime.text = String(format: "%.3Maf", BestTime)
+            label_bestTime.text = String(bestTime)
             
                 button_reset.isHidden = false
                 label_Average_label.isHidden = false
@@ -185,6 +185,7 @@ class ViewController: UIViewController{
                 label_var_label.isHidden = false
                 button_next.isHidden = false
                 button_addBest.isHidden = false
+            background_gray.isHidden = false
             
 
             
@@ -221,14 +222,14 @@ class ViewController: UIViewController{
         //ラベルに小数点以下2桁まで表示
         label_Timer.textColor = UIColor.white
                 fontsise = main_count
-                fontsise_2 = 4.0
+                fontsise_2 = 5.0
         
-            self.label_Timer.text = String(format: "%.3f", main_count)
+        self.label_Timer.text = String(format: "%.2f",main_count)
             while fontsise >= 10{
                 fontsise = fontsise / 10
                 fontsise_2 += 1.0
             }
-            label_Timer.font = UIFont.italicSystemFont(ofSize: 450.0 / fontsise_2)
+            label_Timer.font = UIFont.italicSystemFont(ofSize: 540.0 / fontsise_2)
     }
     
     @objc func down() {
